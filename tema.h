@@ -1,0 +1,201 @@
+#ifndef FUNCTII_H_INCLUDED
+#define FUNCTII_H_INCLUDED
+#include "functii.h"
+using namespace std;
+void citireVector(int v[], int& dim){
+    ifstream read("data.txt");
+
+    read>>dim;
+
+    for(int i=0;i<dim;i++)
+    {
+        read>>v[i];
+    }
+}
+
+void afisareVector(int v[], int dim)
+    {
+        cout<<endl;
+        for(int i=0; i<dim; i++){
+             cout<<v[i]<<" ";
+        }
+        cout<<endl;
+
+    }
+
+//problema 1
+int nrDivizoriProprii(int n) {
+    int ct=0;
+
+    for (int d=2; d<=n/2;d++)
+    {
+        if (n%d==0)
+            ct++;
+    }
+
+    return nr;
+}
+
+int pozitieControl(int v[], int n) {
+    int nr=0, div;
+
+    for (int i=1; i<=n; i++) {
+        div=nrDivizoriProprii(v[i]);
+
+        if (div>=3 && div<=5) {
+            nr++;
+            if (nr==4)
+                return i;
+        }
+    }
+
+    return 0;
+}
+
+    void bubbleCrescator(int v[],int n){
+
+     bool sortat=false;
+     do{
+       sortat=true;
+       for(int i=0; i<n-1; i++)
+        {
+           if(a[i]>a[i+1])
+           {
+                    int aux=a[i];
+                    a[i]=a[i+1];
+                    a[i+1]=aux;
+                    sortat=false;
+           }
+        }
+
+
+    }while(sortat==false);
+    }
+
+}
+
+    void bubbleDescrescator(int v[],int n){
+
+     bool sortat=false;
+     do{
+       sortat=true;
+       for(int i=0; i<n-1; i++)
+        {
+           if(a[i]<a[i+1])
+           {
+                    int aux=a[i];
+                    a[i]=a[i+1];
+                    a[i+1]=aux;
+                    sortat=false;
+           }
+        }
+
+
+    }while(sortat==false);
+    }
+
+
+void sortareMunte(int v[], int n) {
+    int p;
+
+    p=pozitieControl(v, n);
+
+    if (p==0) {
+        cout << "Nu exista al 4-lea element cerut.";
+    } else {
+        bubbleCrescator(v, 1, p);
+        bubbleDescrescator(v, p + 1, n);
+        afisareVector(v, n);
+    }
+}
+//problema 2
+//? cum se face in baza 2
+
+
+
+//problema 3
+int pozPrimulMinim(int v[], int n)
+{
+    int i,p=1;
+    for (i=2; i<=n; i++)
+    {
+        if (v[i]<v[p])
+            p=i;
+    }
+
+    return p;
+}
+
+int pozUltimulMaxim(int v[], int n)
+{
+    int p=1;
+
+    for (int i=2;i<=n;i++) {
+        if (v[i]>=v[p])
+            p=i;
+    }
+    return p;
+}
+void sortareSpeciala(int v[], int n)
+{
+    int pmin, pmax, aux;
+
+    pmin=pozPrimulMinim(v, n);
+    pmax=pozUltimulMaxim(v, n);
+
+    if (pmin>pmax)
+    {
+        aux=pmin;
+        pmin=pmax;
+        pmax=aux;
+    }
+
+
+//problema 4
+void sortarePrinSelectie(int a[], int n){
+        for(int i=0; i<n; i++)
+        {
+           for(int j=i+1;j<n;j++){
+                 if(a[i]<a[j])
+                {
+                    int aux=a[i];
+                    a[i]=a[j];
+                    a[j]=aux;
+                }
+           }
+        }
+    }
+
+void sortareJumatati(int v[],int n) {
+    int mij;
+    mij=n/2;
+    bubbleCrescator(v,1,mij);
+    sortarePrinSelectie(v,mij+1,n);
+    afisareVector(v,n);
+}
+
+//problema 5
+void separare(int v[],int n,int p[],int &np,int imp[],int &ni)
+{
+    np=0;
+    ni=0;
+    for (int i=1;i<=n; i++)
+    {
+        if (v[i]%2==0) {
+            np++;
+            p[np]=v[i];
+        }else{
+            ni++;
+            imp[ni]=v[i];
+        }
+    }
+}
+
+void sortarePareImpare(int v[], int n) {
+    int p[101], imp[101], np, ni;
+    separare(v,n,p,np,imp,ni);
+    bubbleCrescator(p,1,np);
+    bubbleDescrescator(imp,1,ni);
+    afisareVector(v,n);
+}
+#endif // TEMA_H_INCLUDED
