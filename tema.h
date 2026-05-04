@@ -1,7 +1,10 @@
 #ifndef FUNCTII_H_INCLUDED
 #define FUNCTII_H_INCLUDED
-#include "functii.h"
+#include <iostream>
+#include <fstream>
 using namespace std;
+
+
 void citireVector(int v[], int& dim){
     ifstream read("data.txt");
 
@@ -33,7 +36,7 @@ int nrDivizoriProprii(int n) {
             ct++;
     }
 
-    return nr;
+    return ct;
 }
 
 int pozitieControl(int v[], int n) {
@@ -52,7 +55,7 @@ int pozitieControl(int v[], int n) {
     return 0;
 }
 
-    void bubbleCrescator(int v[],int n){
+    void bubbleCrescator(int a[],int n){
 
      bool sortat=false;
      do{
@@ -72,9 +75,7 @@ int pozitieControl(int v[], int n) {
     }while(sortat==false);
     }
 
-}
-
-    void bubbleDescrescator(int v[],int n){
+    void bubbleDescrescator(int a[],int n){
 
      bool sortat=false;
      do{
@@ -103,9 +104,7 @@ void sortareMunte(int v[], int n) {
     if (p==0) {
         cout << "Nu exista al 4-lea element cerut.";
     } else {
-        bubbleCrescator(v, 1, p);
-        bubbleDescrescator(v, p + 1, n);
-        afisareVector(v, n);
+
     }
 }
 //problema 2
@@ -149,7 +148,7 @@ void sortareSpeciala(int v[], int n)
         pmin=pmax;
         pmax=aux;
     }
-
+}
 
 //problema 4
 void sortarePrinSelectie(int a[], int n){
@@ -169,9 +168,7 @@ void sortarePrinSelectie(int a[], int n){
 void sortareJumatati(int v[],int n) {
     int mij;
     mij=n/2;
-    bubbleCrescator(v,1,mij);
-    sortarePrinSelectie(v,mij+1,n);
-    afisareVector(v,n);
+
 }
 
 //problema 5
@@ -194,14 +191,13 @@ void separare(int v[],int n,int p[],int &np,int imp[],int &ni)
 void sortarePareImpare(int v[], int n) {
     int p[101], imp[101], np, ni;
     separare(v,n,p,np,imp,ni);
-    bubbleCrescator(p,1,np);
-    bubbleDescrescator(imp,1,ni);
+
     afisareVector(v,n);
 }
 
 //transformare in baza 2
 // 124
-initiere: p=1; nr=1;
+//initiere: p=1; nr=1;
 //  n!=0         uc          nr        p         n
 //  da           0           0         10       62
 //  da           0           0         100      31
@@ -216,12 +212,91 @@ int decToBin(int n)
     int nr=0;
     while(n!=0)
     {
-        uc=n%2;
+      int  uc=n%2;
         nr=nr+uc*p;
         p=p*10;
         n=n/2;
     }
     return nr;
 }
+
+
+int  frecventaCifraNumar(int n,int cifra)
+{
+    int f[10]{};
+    while(n!=0)
+    {
+        int uc=n%10;
+        f[uc]++;
+        n=n/10;
+    }
+    return f[cifra];
+
+}
+//initiere: nr=0
+//
+int pozitieDeControl(int v[], int n, int k, int t)
+{
+    int nr=0;
+    for(int i=0; i<=n;i++)
+    {
+       if(frecventaCifraNumar(v[i],1)==t)
+        {
+            nr++;
+           if(nr==k)
+           {
+               return i;
+           }
+        }
+    }
+
+    return -1;
+
+}
+
+
+void sortareCrescatoare(int v[], int n)
+{
+   bool sortat=false;
+   do
+   {
+       for(int i=0;i<n-1;i++)
+   {
+       if(v[i]>v[i+1])
+       {
+           int aux=v[i];
+           v[i]=v[i+1];
+           v[i+1]=aux;
+           sortat=false;
+       }
+   }
+   }while(sortat==false);
+
+}
+
+void sortareDescrescatoare(int v[], int n)
+{
+   bool sortat=false;
+   do
+   {
+       for(int i=0;i<n-1;i++)
+   {
+       if(v[i]<v[i+1])
+       {
+           int aux=v[i];
+           v[i]=v[i+1];
+           v[i+1]=aux;
+           sortat=false;
+       }
+   }
+   }while(sortat==false);
+}
+
+void sortareTipVale(int v[], int dim, int k)
+    {
+
+
+
+    }
 
 #endif // TEMA_H_INCLUDED

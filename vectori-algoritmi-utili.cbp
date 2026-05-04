@@ -39,7 +39,6 @@
 		<Unit filename="functii.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="main.cpp" />
 		<Unit filename="solutii.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
