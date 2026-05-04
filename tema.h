@@ -198,4 +198,30 @@ void sortarePareImpare(int v[], int n) {
     bubbleDescrescator(imp,1,ni);
     afisareVector(v,n);
 }
+
+//transformare in baza 2
+// 124
+initiere: p=1; nr=1;
+//  n!=0         uc          nr        p         n
+//  da           0           0         10       62
+//  da           0           0         100      31
+//  da           1           100       1000     15
+//  da           1           1100      10000    7
+//  da           1           11100     100000    3
+//  da           1           111100    1000000   1
+//  da           1           1111100   10000000  0
+int decToBin(int n)
+{
+    int p=1;
+    int nr=0;
+    while(n!=0)
+    {
+        uc=n%2;
+        nr=nr+uc*p;
+        p=p*10;
+        n=n/2;
+    }
+    return nr;
+}
+
 #endif // TEMA_H_INCLUDED
