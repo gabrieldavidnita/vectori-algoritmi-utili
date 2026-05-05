@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1777996732 source:c:\mycode\initiere\vectori-algoritmi-utili\main.cpp
+1778003374 source:c:\mycode\initiere\vectori-algoritmi-utili\main.cpp
 	<iostream>
+	"algoritmi.h"
 	"solutii.h"
 
-1777997223 c:\mycode\initiere\vectori-algoritmi-utili\solutii.h
-	"tema.h"
+1778003478 c:\mycode\initiere\vectori-algoritmi-utili\solutii.h
+	"functii.h"
 
-1777835460 c:\mycode\initiere\vectori-algoritmi-utili\functii.h
+1778003388 c:\mycode\initiere\vectori-algoritmi-utili\functii.h
 	<iostream>
 	<fstream>
 
-1777906308 c:\mycode\initiere\vectori-algoritmi-utili\algoritmi.h
+1777999444 c:\mycode\initiere\vectori-algoritmi-utili\algoritmi.h
 	"functii.h"
 
 1777997195 c:\mycode\initiere\vectori-algoritmi-utili\tema.h

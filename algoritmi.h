@@ -77,12 +77,24 @@ void sortarePinBubbleSort(int a[], int n)
     } while (sortat == false);
 }
 
+//1234445211
+// numar!=0   uc     0 1 2 3 4 5 6 7 8 9   numar
+//  da         1     0 1 0 0 0 0 0 0 0 0    12344421
+//  da         1     0 2 0 0 0 0 0 0 0 0    1234442
+//  da         2     0 2 1 0 0 0 0 0 0 0    123444
+//  da         4     0 2 1 0 1 0 0 0 0 0    12344
+//  da         4     0 2 1 0 2 0 0 0 0 0    1234
+//  da         4     0 2 1 0 3 0 0 0 0 0    123
+//  da         3     0 2 1 1 3 0 0 0 0 0    12
+//  da         2     0 2 2 1 3 0 0 0 0 0    1
+//  da         1     0 3 2 1 3 0 0 0 0 0    0
+//  nu
 void frecventaCifra(int numar, int f[])
 {
     while (numar != 0)
     {
         int uc = numar % 10;
-        f[uc]++;
+         f[uc]++;
         numar = numar / 10;
     }
 }
