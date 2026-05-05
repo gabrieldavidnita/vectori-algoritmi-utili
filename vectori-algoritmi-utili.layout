@@ -2,36 +2,40 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="functii.h" open="1" top="0" tabpos="1" split="2" active="1" splitpos="845" zoom_1="0" zoom_2="0">
+	<File name="data.txt" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2016" topLine="24" />
-			<Cursor2 position="252" topLine="0" />
+			<Cursor1 position="32" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="119" topLine="0" />
+			<Cursor1 position="74" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="tema.h" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="solutii.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1269" topLine="151" />
+			<Cursor1 position="728" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="algoritmi.h" open="1" top="0" tabpos="3" split="2" active="1" splitpos="851" zoom_1="0" zoom_2="0">
+	<File name="algoritmi.h" open="1" top="0" tabpos="2" split="2" active="1" splitpos="851" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1354" topLine="0" />
+			<Cursor1 position="2853" topLine="35" />
 			<Cursor2 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="data.txt" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="functii.h" open="1" top="0" tabpos="1" split="2" active="1" splitpos="845" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="20" topLine="0" />
+			<Cursor1 position="1690" topLine="39" />
+			<Cursor2 position="304" topLine="0" />
 		</Cursor>
+		<Folding>
+			<Collapse line="8" />
+			<Collapse line="20" />
+		</Folding>
 	</File>
-	<File name="solutii.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tema.h" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="83" topLine="0" />
+			<Cursor1 position="3438" topLine="221" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

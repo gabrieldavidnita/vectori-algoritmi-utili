@@ -55,58 +55,60 @@ int pozitieControl(int v[], int n) {
     return 0;
 }
 
-    void bubbleCrescator(int a[],int n){
-
-     bool sortat=false;
-     do{
-       sortat=true;
-       for(int i=0; i<n-1; i++)
+void sortareCrescPeInterval1(int a[], int dim, int mi, int ms)
+{
+    bool sortate = false;
+    do
+    {
+        sortate = true;
+        for (int i = mi; i < dim - 1 && i <=ms; i++)
         {
-           if(a[i]>a[i+1])
-           {
-                    int aux=a[i];
-                    a[i]=a[i+1];
-                    a[i+1]=aux;
-                    sortat=false;
-           }
+            if (a[i] > a[i + 1])
+            {
+                int aux = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = aux;
+                sortate = false;
+            }
         }
 
-
-    }while(sortat==false);
-    }
-
-    void bubbleDescrescator(int a[],int n){
-
-     bool sortat=false;
-     do{
-       sortat=true;
-       for(int i=0; i<n-1; i++)
+    } while (sortate == false);
+}
+void sortareDescrPeInterval1(int a[], int dim, int mi, int ms)
+{
+    bool sortate = false;
+    do
+    {
+        sortate = true;
+        for (int i = mi; i < dim - 1 && i <= ms; i++)
         {
-           if(a[i]<a[i+1])
-           {
-                    int aux=a[i];
-                    a[i]=a[i+1];
-                    a[i+1]=aux;
-                    sortat=false;
-           }
+            if (a[i] < a[i + 1])
+            {
+                int aux = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = aux;
+                sortate = false;
+            }
         }
 
+    } while (sortate == false);
+}
 
-    }while(sortat==false);
-    }
-
-
-void sortareMunte(int v[], int n) {
+void sortareMunte(int v[], int n)
+{
     int p;
 
-    p=pozitieControl(v, n);
+    p= pozitieControl(v, n);
 
-    if (p==0) {
+    if (p == 0)
         cout << "Nu exista al 4-lea element cerut.";
-    } else {
-
+    else
+    {
+        sortareCrescPeInterval1(v, n + 1, 1, p);
+        sortareDescrPeInterval1(v, n + 1, p + 1, n);
     }
 }
+
 //problema 2
 //? cum se face in baza 2
 
@@ -129,9 +131,12 @@ int pozUltimulMaxim(int v[], int n)
 {
     int p=1;
 
-    for (int i=2;i<=n;i++) {
-        if (v[i]>=v[p])
+    for (int i=2;i<=n;i++)
+    {
+        if (v[i] >= v[p])
+        {
             p=i;
+        }
     }
     return p;
 }
@@ -148,7 +153,20 @@ void sortareSpeciala(int v[], int n)
         pmin=pmax;
         pmax=aux;
     }
+     for (int i = pmin + 1; i < pmax - 1; i++)
+    {
+        for (int j = i + 1; j < pmax; j++)
+        {
+            if (v[i] > v[j])
+            {
+                aux = v[i];
+                v[i] = v[j];
+                v[j] = aux;
+            }
+        }
+    }
 }
+
 
 //problema 4
 void sortarePrinSelectie(int a[], int n){
@@ -168,6 +186,8 @@ void sortarePrinSelectie(int a[], int n){
 void sortareJumatati(int v[],int n) {
     int mij;
     mij=n/2;
+     sortareCrescPeInterval1(v, n+1,1,mij);
+    sortareDescrPeInterval1(v, n+1, mij+1, n);
 
 }
 
@@ -188,12 +208,6 @@ void separare(int v[],int n,int p[],int &np,int imp[],int &ni)
     }
 }
 
-void sortarePareImpare(int v[], int n) {
-    int p[101], imp[101], np, ni;
-    separare(v,n,p,np,imp,ni);
-
-    afisareVector(v,n);
-}
 
 //transformare in baza 2
 // 124
@@ -255,48 +269,14 @@ int pozitieDeControl(int v[], int n, int k, int t)
 }
 
 
-void sortareCrescatoare(int v[], int n)
-{
-   bool sortat=false;
-   do
-   {
-       for(int i=0;i<n-1;i++)
-   {
-       if(v[i]>v[i+1])
-       {
-           int aux=v[i];
-           v[i]=v[i+1];
-           v[i+1]=aux;
-           sortat=false;
-       }
-   }
-   }while(sortat==false);
-
-}
-
-void sortareDescrescatoare(int v[], int n)
-{
-   bool sortat=false;
-   do
-   {
-       for(int i=0;i<n-1;i++)
-   {
-       if(v[i]<v[i+1])
-       {
-           int aux=v[i];
-           v[i]=v[i+1];
-           v[i+1]=aux;
-           sortat=false;
-       }
-   }
-   }while(sortat==false);
-}
 
 void sortareTipVale(int v[], int dim, int k)
     {
 
-
+        sortareDescrPeInterval1(v, dim, 0, k);
+        sortareCrescPeInterval1(v, dim,k ,dim );
 
     }
+
 
 #endif // TEMA_H_INCLUDED
