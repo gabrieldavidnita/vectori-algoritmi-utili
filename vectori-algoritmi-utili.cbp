@@ -40,10 +40,16 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="solutii-1.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="solutii-tema.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="solutii.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="tema-1.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="tema.h">
