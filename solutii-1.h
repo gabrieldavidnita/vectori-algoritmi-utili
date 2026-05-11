@@ -93,4 +93,15 @@ void solutie2af()
     afisareVector1(v,dim);
 }
 
+void solutie2ag()
+{
+    int n;
+    int f[10]{};
+    cout<<" n= ";
+    cin>>n;
+    frecventaCifreNumar(n,f);
+    int minim=aflareMinim(f);
+    cout<<" Cel mai mic numar care se poate forma din cifrele numarului initial este "<<minim<<endl;
+}
+
 #endif // SOLUTII-1_H_INCLUDED

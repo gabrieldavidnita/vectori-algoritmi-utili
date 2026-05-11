@@ -187,9 +187,68 @@ void frecventa(int n, int f[])
     }
 }
 
+//problema 1;
+void stergereElemPozVec(int v[], int&dim, int poz)
+{
+    for(int i=poz; i<dim ;i++)
+    {
+        v[i]=v[i+1];
+    }
+    dim--;
+}
 
+bool isNumarPrim(int n)
+{
+    int ok=1;
 
+    if(n<2){
+        ok=0;
+    }
+    for(int d=2; d<=n/2; d++)
+    {
+        if(n%d==0){
+            ok=0;
+        }
+    }
 
+    return ok;
+}
+int pozVecElemPrim(int v[], int dim)
+{
+    int poz=0;
+    int ct=0;
+    for(int i=0; i<dim&ct!=3; i++)
+    {
+        if(isNumarPrim(v[i]))
+        {
+            ct++;
+        }
+        if(ct==3)
+        {
+            poz=i;
+        }
+    }
+    return poz;
+}
+
+bool isPrimaEgalaCuUltima(int n)
+{
+    int ok=0;
+    int uc=n%10;
+    while(n>=10)
+    {
+        n=n/10;
+    }
+    int prima=n;
+    if(prima==uc)
+    {
+     ok=1;
+    }else{
+
+    ok=0;
+    }
+    return ok;
+}
 
 
 

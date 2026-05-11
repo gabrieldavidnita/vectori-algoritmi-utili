@@ -232,6 +232,35 @@ void vectorCifrePrimeLipsa(int f[],int v[],int &dim)
 
 
 //problema 2ag
-//?
+//initiere: n=49931121, i=0, n<=0
+//                          0 1 2 3 4 5 6 7 8 9
+//   i<=9    f[i]>0    nr   0 3 1 1 1 0 0 0 0 2   i
+//    da      nu                                  1
+//    da      da        1     2
+//            da       11     1
+//            da       111    0                   2
+//    da      da       1112   0                   3
+//    da      da       11123  0                   4
+//    da      da       111234 0                   5
+//    da      nu                                  6
+//    da      nu                                  7
+//    da      nu                                  8
+//    da      nu                                  9
+//    da      da      1112349                  1
+//    da      da      11123499                 0  10
+//    nu
 
+ int aflareMinim(int f[])
+ {
+     int nr=0;
+     for(int i=0; i<=9; i++)
+     {
+        while(f[i]>0)
+        {
+            nr=nr*10+i;
+            f[i]--;
+        }
+     }
+     return nr;
+ }
 #endif // TEMA-1_H_INCLUDED

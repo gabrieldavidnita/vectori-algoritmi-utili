@@ -99,4 +99,28 @@ void frecventaCifra(int numar, int f[])
     }
 }
 
+//algoritmul de stergere
+
+// 12 45 64 24 31 36   , dim =5. poz=1
+// i      i<  dim    v[i]   12 45 64 24 31 36  i
+// 1      1<5 da     64     12 64 45 24 31 36  2
+// 2      2<5 da     24     12 64 24 45 31 36  3
+// 3      3<5 da     31     12 64 24 31 45 36  4
+// 4      4<5 da     46     12 64 24 31 36 45  5
+// 5      5<5 nu
+
+  void stergereElemPozVec(int v[],int&dim,int poz){
+      for(int i=poz;i<dim;i++){
+         v[i]=v[i+1];
+      }
+      dim--;
+
+  }
+
+
+
+
+
+
+
 #endif // ALGORITMI_H_INCLUDED

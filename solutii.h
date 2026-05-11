@@ -18,7 +18,7 @@ void solutie2a()
      cout<<"numar=";
      cin>>numar;
      int f[10]{};
-     frecventaCifra(numar,f);
+     frecventa(numar,f);
     for(int i=0; i<10; i++)
         if(f[i]>0)
     {
@@ -41,7 +41,37 @@ void solutie3a()
        }
    }
 }
+void solutie1cd()
+{
+    int v[100], n;
+    citireVector(v,n);
 
-
+    cout<<endl;
+    stergereElemPozVec(v,n,1);
+       afisareVector(v,n);
+}
+// 232 531 121 563 434 121 322   , n=7
+//                                 0   1   2   3   4   5   6
+//i<n  isPrimaEgalaCuUltima(v[i]) 232 531 121 563 434 121 322   i
+//0<7             da              531 121 563 434 121 322       0
+//0<6             nu                                            1
+//1<6             da              531 563 434 121 322           1
+//1<5             nu                                            2
+//2<5             da              531 563 121 322               2
+//2<4             da              531 563 322                   2
+//2<3             nu                                            3
+//3<3 nu
+void solutiee5()
+{
+    int v[100], n;
+    citireVector(v,n);
+    for(int i=0;i<n;i++){
+        if(isPrimaEgalaCuUltima(v[i])){
+            stergereElemPozVec(v,n,i);
+            i--;
+        }
+    }
+    afisareVector(v,n);
+}
 
 #endif // SOLUTII_H_INCLUDED
