@@ -1,6 +1,8 @@
 #ifndef ALGORITMI_H_INCLUDED
 #define ALGORITMI_H_INCLUDED
-#include "functii.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
 // unctei ce sorteaza vectorul crescator
 //                            0   1   2  3  4
 //   i<n   j<n  a[i]>a[j]     12  31  4 -2  14  j  i
@@ -117,6 +119,37 @@ void frecventaCifra(int numar, int f[])
 
   }
 
+  void inserareElemPozVec(int v[],int&dim ,int poz ,int nr){
+    for(int i=dim-1;i>=poz;i--){
+        v[i+1]=v[i];
+
+    }
+    dim++;
+    v[poz]=nr;
+
+
+  }
+
+// citire vector
+void citireVector(int v[], int &dim)
+{
+    ifstream read("data.txt");
+
+    read >> dim;
+
+    for (int i = 0; i < dim; i++)
+    {
+        read >> v[i];
+    }
+}
+// afisare vector
+void afisareVector(int v[], int dim)
+{ cout << endl;
+    for (int i = 0; i < dim; i++)
+    {
+        cout << v[i] << " ";
+    }
+}
 
 
 
