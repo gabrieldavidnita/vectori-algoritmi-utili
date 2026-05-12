@@ -118,6 +118,18 @@ void frecventaCifra(int numar, int f[])
       dim--;
 
   }
+//
+// 12 45 64 24 31 36  ,dim =6. poz=1  nr=90
+//                0  1  2  3  4  5  6
+// i    i>=poz    12 45 64 24 31 36 0   i
+// 5    5>=1 da   12 45 64 24 31 36 36  4
+// 4    4>=1 da   12 45 64 24 31 31 36  3
+// 3    3>=1 da   12 45 64 24 24 31 36  2
+// 2    2>=1 da   12 45 64 64 24 31 36  1
+// 1    1>=1 da   12 45 45 64 24 31 36  0
+// 0    0>=1 nu
+
+//12 90 45 64 24 31 36
 
   void inserareElemPozVec(int v[],int&dim ,int poz ,int nr){
     for(int i=dim-1;i>=poz;i--){

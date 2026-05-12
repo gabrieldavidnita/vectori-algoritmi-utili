@@ -104,4 +104,7 @@ void solutie2ag()
     cout<<" Cel mai mic numar care se poate forma din cifrele numarului initial este "<<minim<<endl;
 }
 
+
+
+
 #endif // SOLUTII-1_H_INCLUDED

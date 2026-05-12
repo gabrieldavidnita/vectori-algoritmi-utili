@@ -74,4 +74,42 @@ void solutiee5()
     afisareVector(v,n);
 }
 
+
+
+// n=8  , 2 4 6 3 5 -4 -2 9     0  1  2  3 4   5  6   7  8
+//i<n      v[i]<0   putere     -2  4 -6  3 5  -4  -2  9  0   i
+//0<8 da     da      -8        -2 -8  4 -6 3   5  -4 -2  9   1
+//1<8 da
+void solutieInserare1a()
+{
+    int v[100], n;
+    citireVector(v,n);
+    for(int i=0; i<n; i++)
+    {
+
+
+        if(v[i]<0)
+        {
+             int putere=pow(v[i],3);
+
+            inserareElemPozVec(v,n,i+1,putere);
+            i++;
+        }
+    }
+
+    afisareVector(v,n);
+}
+void solutieInserare2a()
+{
+    int v[100],n;
+    citireVector(v,n);
+    afisareVector(v,n);
+    int poz=pozKElement(v,n,3);
+    int rast=oglNumar(v[poz]);
+    inserareElemPozVec(v,n,poz+1,rast);
+   afisareVector(v,n);
+
+}
+
+
 #endif // SOLUTII_H_INCLUDED

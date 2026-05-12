@@ -2,43 +2,30 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="algoritmi.h" open="1" top="0" tabpos="2" split="2" active="1" splitpos="1674" zoom_1="0" zoom_2="0">
+	<File name="solutii-1.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3848" topLine="58" />
-			<Cursor2 position="2933" topLine="45" />
+			<Cursor1 position="2228" topLine="63" />
 		</Cursor>
 	</File>
-	<File name="tema-1.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="solutii.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3628" topLine="0" />
+			<Cursor1 position="1905" topLine="32" />
 		</Cursor>
 	</File>
-	<File name="functii.h" open="1" top="0" tabpos="1" split="2" active="1" splitpos="611" zoom_1="1" zoom_2="0">
+	<File name="functii.h" open="1" top="0" tabpos="1" split="2" active="1" splitpos="1282" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4053" topLine="0" />
-			<Cursor2 position="304" topLine="147" />
+			<Cursor1 position="121" topLine="0" />
+			<Cursor2 position="304" topLine="137" />
 		</Cursor>
-		<Folding>
-			<Collapse line="29" />
-			<Collapse line="53" />
-			<Collapse line="73" />
-			<Collapse line="78" />
-			<Collapse line="84" />
-		</Folding>
 	</File>
 	<File name="tema.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="117" topLine="97" />
 		</Cursor>
 	</File>
-	<File name="solutii-1.h" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1756" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="data.txt" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="25" topLine="0" />
+			<Cursor1 position="164" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="solutii-tema.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -46,14 +33,23 @@
 			<Cursor1 position="79" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="tema-1.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="67" topLine="0" />
+			<Cursor1 position="3815" topLine="222" />
 		</Cursor>
 	</File>
-	<File name="solutii.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="data.txt" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="539" topLine="0" />
+			<Cursor1 position="38" topLine="0" />
 		</Cursor>
+	</File>
+	<File name="algoritmi.h" open="1" top="1" tabpos="2" split="2" active="1" splitpos="1674" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4563" topLine="92" />
+			<Cursor2 position="2974" topLine="54" />
+		</Cursor>
+		<Folding>
+			<Collapse line="25" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

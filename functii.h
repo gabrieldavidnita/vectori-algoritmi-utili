@@ -1,6 +1,7 @@
 #ifndef FUNCTII_H_INCLUDED
 #define FUNCTII_H_INCLUDED
 #include <iostream>
+#include <math.h>
 #include <fstream>
 using namespace std;
 
@@ -213,6 +214,19 @@ bool isNumarPrim(int n)
 
     return ok;
 }
+
+// 45 23 34 45 34  dim=5, poz=0; ct=0
+// i   i<dim   ct!=3   numarprim   ct     ct==3   poz   i
+// 0   0<5     0!=3 da   nu                             1
+// 1   1<5     0!=3 da   da        1                    2
+// 2   2<5     1!=3 da   da        2                    3
+// 3   3<5     2!=3 da   nu                             4
+// 4   4<5     2!=3 da   da        3                    5
+// 5   5<5 nu                              da       5
+
+
+
+
 int pozVecElemPrim(int v[], int dim)
 {
     int poz=0;
@@ -223,7 +237,7 @@ int pozVecElemPrim(int v[], int dim)
         {
             ct++;
         }
-        if(ct==3)
+        if(ct==3 )
         {
             poz=i;
         }
@@ -251,9 +265,97 @@ bool isPrimaEgalaCuUltima(int n)
 }
 
 
+//problema 1 , 12.05.2026
+
+void inserareElemPozVec(int v[], int&dim , int poz, int nr)
+{
+    for(int i=dim-1; i>=poz; i--)
+    {
+        v[i+1]=v[i];
+
+    }
+    dim++;
+    v[poz]=nr;
+
+}
+//n=34567   uc=7  ok=1
+// n!=0    n      penc  uc  uc>penc  ok  n
+// da    3456      7     6  6>7 nu    -  345
+// da              6     5  5>7 nu    -  34
+// da              5     4  4>5 nu    -  3
+// da              4     3  3>5 nu    -  0
+// nu
+//ok=1
+//1234
+//uc 4, n=123
+// n!=0    pc   uc   uc-1!=pc  ok   n
+// da      4    3
+bool isNumarCuCifreConsecutive(int n)
+{  int ok=1;
+   int uc=n%10;
+   n=n/10;
+    while(n!=0)
+    {
+
+        int pc=uc;
+        uc=n%10;
+        if(pc-1!=uc){
+            ok=0;
+        }
+        n=n/10;
+    }
+    return ok;
+}
+// 8
+//123 434 456 403 123 145 567 993
+// i<dim  isNumarCuCifreConsecutive(v[i])  ct  ct==k  poz   i
+// 0<8              da                     1     nu    -    1
+// 1<8              nu                     -     nu    -    2
+// 2<8              da                     2     nu    -    3
+// 3<8              nu                     -     nu    -    4
+// 4<8              da                     3     da    4    5
+// 5<8              nu                     -     da    5
+
+int pozKElement(int v[], int dim, int k)
+{
+    int ct=0;
+    int poz=0;
+    for(int i=0; i<dim&&ct!=k; i++)
+    {
+
+        if (isNumarCuCifreConsecutive(v[i]))
+        {
+           ct++;
+        }
+        if(ct==k)
+        {
+            poz=i;
+        }
+    }
+    return poz;
+}
+
+int oglNumar(int n)
+{
+    int ogl=0;
+    while(n!=0)
+    {
+      int uc=n%10;
+      ogl=ogl*10+uc;
+      n=n/10;
+    }
+    return ogl;
+}
 
 
-
-
+bool isnumerePalindroame(int a ,int b)
+{
+    int ok=1;
+   if(oglNumar(a)!=b)
+   {
+       ok=0;
+   }
+   return ok;
+}
 
 #endif // FUNCTII_H_INCLUDED
