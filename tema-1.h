@@ -263,4 +263,10 @@ void vectorCifrePrimeLipsa(int f[],int v[],int &dim)
      }
      return nr;
  }
+
+
+
+
+
+
 #endif // TEMA-1_H_INCLUDED

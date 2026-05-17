@@ -2,6 +2,7 @@
 #define SOLUTII_H_INCLUDED
 #include "functii.h"
 
+
 void solutie1a()
 {
 int v[100], n;
@@ -110,6 +111,4 @@ void solutieInserare2a()
    afisareVector(v,n);
 
 }
-
-
 #endif // SOLUTII_H_INCLUDED

@@ -357,5 +357,18 @@ bool isnumerePalindroame(int a ,int b)
    }
    return ok;
 }
+//123 de 456 123000 +456 =>123456
+int alipireNumere(int a,int b)
+{
+    int copie=b;
+
+    while(copie!=0)
+    {
+        a=a*10;
+        copie=copie/10;
+    }
+    return a+b;
+}
+
 
 #endif // FUNCTII_H_INCLUDED
